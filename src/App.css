@@ -1,0 +1,29 @@
+.tableCell {
+  border: 1px solid rgba(224, 224, 224, 1);
+  border-collapse: collapse;
+  padding: 7px 5px !important;
+}
+
+.textField {
+  width: 100%;
+}
+
+.two {
+  padding: 0 10px !important;
+}
+
+.textarea {
+  width: 100%;
+  background: url("http://i.imgur.com/2cOaJ.png");
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 16px;
+}
+.error{
+  height: 230px;
+}
