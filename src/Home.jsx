@@ -11,11 +11,11 @@ const Home = () => {
     <div className="w-[60%] mx-auto my-4">
     <Form/>
     <SelecTab/>
-    {/* <Response/> */}
+     {/* <Response/>   */}
     <ErrorQueen/>
     </div>
     </>
   )
-}
+} 
 
 export default Home
