@@ -1,7 +1,10 @@
 import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material"
 import Addrow from "./Addrow";
+import { useState } from "react";
 
-const CreateTable = ({ text }) => {
+const CreateTable = ({ text, Data, setData }) => {
+
+    const [rows, addrows] = useState([0])
     return (
         <Box>
             <Typography mt={2} mb={2}>
@@ -16,7 +19,15 @@ const CreateTable = ({ text }) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    <Addrow />
+                    {rows.map((index) => (
+                        <Addrow addrows={addrows}
+                            key={index}
+                            rowId={index}
+                            data = {Data}
+                            setData = {setData}
+                        />
+                    ))}
+
                 </TableBody>
             </Table>
         </Box>

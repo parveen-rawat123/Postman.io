@@ -6,10 +6,19 @@ const DataProvider = ({ children }) => {
     const [formData, setformData] =  useState({
         url : ''  ,
         type : 'POST'
-    })
+    });
 
+    const [paramsData, setparamsData ] = useState([])
+    const [headersData, setheadersData ] = useState([])
     return (
-        <DataContext.Provider value={{formData, setformData}}>
+        <DataContext.Provider value={{
+            formData,
+             setformData,
+             paramsData,
+             setparamsData,
+             headersData,
+             setheadersData
+             }}>
             {children}
         </DataContext.Provider>
     )
