@@ -23,7 +23,7 @@ const CreateTable = ({ text, Data, setData }) => {
                         <Addrow addrows={addrows}
                             key={index}
                             rowId={index}
-                            data = {Data}
+                            Data = {Data}
                             setData = {setData}
                         />
                     ))}

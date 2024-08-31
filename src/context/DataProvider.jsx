@@ -10,6 +10,7 @@ const DataProvider = ({ children }) => {
 
     const [paramsData, setparamsData ] = useState([])
     const [headersData, setheadersData ] = useState([])
+    const [jsonText, setjsonText] = useState('')
     return (
         <DataContext.Provider value={{
             formData,
@@ -17,7 +18,9 @@ const DataProvider = ({ children }) => {
              paramsData,
              setparamsData,
              headersData,
-             setheadersData
+             setheadersData,
+             jsonText,
+             setjsonText
              }}>
             {children}
         </DataContext.Provider>

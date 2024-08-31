@@ -1,7 +1,7 @@
 import { Button, MenuItem, Select, TextField } from "@mui/material"
 import { useContext } from "react"
 import { DataContext } from "../context/DataProvider"
-const Form = () => {
+const Form = ({onSendClick}) => {
 
     const { formData, setformData } = useContext(DataContext)
 
@@ -41,6 +41,7 @@ const Form = () => {
                         height: "40px",
                         marginLeft: "5px"
                     }}
+                    onClick={onSendClick}
                     variant="contained"
                 >Send</Button>
             </div>

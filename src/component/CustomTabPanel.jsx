@@ -41,10 +41,11 @@ const CustomTabPanel = () => {
       >
         <CreateTable
           text={"Query Params"}
-          data={paramsData}
+          Data={paramsData}
           setData={setparamsData}
         />
       </Box>
+      
       <Box
         role="tabpanel"
         hidden={value !== 1}
