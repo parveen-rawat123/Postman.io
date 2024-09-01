@@ -11,15 +11,18 @@ const checkValidJson = (jsonText) =>{
 
 export const checkParams = (formData, paramsData, headersData, jsonText, seterrormessage) => {
       if(!formData.url){
-        seterrormessage('request url is missing')
+        seterrormessage('Request URL Is Missing')
            return false
       }
       if(!checkValidJson(jsonText)){
-        seterrormessage('text not valid json')
+        seterrormessage('Text Not Valid Json')
            return false
       }
-       
       return true
 
-}
+};
+
+export const getHeaderAndParams = (objArr) =>{
+   console.log(objArr)
+};
 
