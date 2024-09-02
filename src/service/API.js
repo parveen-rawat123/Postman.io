@@ -12,7 +12,9 @@ export const getData = async (formData, paramsData, headersData, jsonText) =>{
      return await axios({
            method : apiType,
            url :  apiURL,
-           body : jsonText
+           body : jsonText,
+           headers : apiHeaders,
+           params : apiParams
         })        
     } catch (error) {
         console.log("error while calling API")

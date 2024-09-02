@@ -23,6 +23,12 @@ export const checkParams = (formData, paramsData, headersData, jsonText, seterro
 };
 
 export const getHeaderAndParams = (objArr) =>{
-   console.log(objArr)
+   let obj = {}
+   objArr.forEach(element => {
+    if(element.hasOwnProperty('ckeck') && element.check){
+        obj = {...obj, [element.key]: element.value}
+   }
+   });
+   return obj;
 };
 

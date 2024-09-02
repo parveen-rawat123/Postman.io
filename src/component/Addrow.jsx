@@ -11,11 +11,13 @@ const Addrow = ({ addrows, rowId, Data, setData }) => {
         if (!checkcheckBox) {
             setcheckcheckBox(true);
             addrows((oldrow) => [...oldrow, rowId]);
-            result = {... result, checked : true}
+            result = {... result, id:rowId,  checked : true}
         } else {
             setcheckcheckBox(false);
-            result = {... result, checked : false}
+            result = {... result,id: rowId,  checked : false}
         }
+
+
 
         let index = Data.findIndex(value => value.id === Number(e.target.name));
 
@@ -61,7 +63,7 @@ const Addrow = ({ addrows, rowId, Data, setData }) => {
             <TableCell className="tableCell two">
                 <TextField
                     className="textField"
-                    InputProps={{ style: { height: 30, padding: "0 5px" } }}
+                    InputProps={{ style: { height: 30, padding: "0 5px" }}}
                     onChange={onTextChange}
                     name="key"
                 />
